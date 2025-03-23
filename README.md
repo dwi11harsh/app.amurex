@@ -1,5 +1,9 @@
 # App.Amurex
 
+- This is not the real Amurex app
+- Go to their official website
+- I am merely making this with hope to merge to their codebase as they do not have time to migrate to TypeScript
+
 ## Built with Turborepo with shadcn/ui
 
 ### Add ui components
