@@ -6,3 +6,5 @@ export * from "./ui/input";
 export * from "./Navbar";
 export * from "./Searchbar";
 export * from "./NoteEditor";
+export * from "./star-button";
+export * from "./OnboardingFlow";

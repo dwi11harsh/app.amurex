@@ -8,7 +8,7 @@ const louizeFont = localFont({
 
 const Page = () => {
   return (
-    <main>
+    <>
       <Navbar />
       <div
         className={`${louizeFont.variable} flex flex-col h-screen ml-16`}
@@ -29,7 +29,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 };
 
