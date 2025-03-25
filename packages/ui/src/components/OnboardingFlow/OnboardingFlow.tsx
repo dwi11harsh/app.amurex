@@ -1,15 +1,6 @@
-"use client";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import React from "react";
 
-interface OnboardingFlowProps {
-  onClose: () => void;
-  setHasSeenOnboarding: Dispatch<SetStateAction<boolean>>;
-}
-
-export const OnboardingFlow = ({
-  onClose,
-  setHasSeenOnboarding,
-}: OnboardingFlowProps): JSX.Element => {
+export const OnboardingFlow = (): JSX.Element => {
   // Following Function is never called
 
   // const handleClose = async (): Promise<void> => {

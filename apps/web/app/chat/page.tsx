@@ -1,34 +1,23 @@
 "use client";
 
-import { Navbar, OnboardingFlow, StarButton } from "@repo/ui/components";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import { Navbar, ShowOnboardingFlow, StarButton } from "@repo/ui/components";
+import { CheckSearchInitiated } from "@repo/web/components/CheckSearchInitiated";
+import { useState } from "react";
 
 const AISearch = (): JSX.Element => {
-  const [isSearchInitiated, setIsSearchInitiated] = useState<boolean>(false);
   const [showOnboarding, setShowOnboarding] = useState<boolean>(false);
-  const [hasSeenOnboarding, setHasSeenOnboarding] = useState<boolean>(false);
   const [hasGoogleDocs, setHasGoogleDocs] = useState<boolean>(false);
   const [hasNotion, setHasNotion] = useState<boolean>(false);
 
   return (
     <>
       <Navbar />
-
-      <div
-        className={`min-h-screen bg-black lg:ml-[4rem] ${
-          isSearchInitiated ? "pt-6" : "flex items-center justify-center"
-        }`}
-      >
+      <CheckSearchInitiated>
         <div className="fixed top-4 right-4 z-50">
           <StarButton />
         </div>
 
-        {showOnboarding && (
-          <OnboardingFlow
-            onClose={() => setShowOnboarding(false)}
-            setHasSeenOnboarding={setHasSeenOnboarding}
-          />
-        )}
+        <ShowOnboardingFlow />
 
         <div className="p-3 md:p-6 max-w-7xl mx-auto w-full">
           {!showOnboarding && !hasGoogleDocs && !hasNotion && (
@@ -66,7 +55,7 @@ const AISearch = (): JSX.Element => {
             </div>
           )}
         </div>
-      </div>
+      </CheckSearchInitiated>
     </>
   );
 };

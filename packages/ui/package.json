@@ -39,6 +39,7 @@
       "./src/hooks/*.ts",
       "./src/hooks/*.tsx"
     ],
-    "./components": "./src/components/index.tsx"
+    "./components": "./src/components/index.tsx",
+    "./store": "./store/index.ts"
   }
 }
