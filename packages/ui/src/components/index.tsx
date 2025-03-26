@@ -8,3 +8,4 @@ export * from "./Searchbar";
 export * from "./NoteEditor";
 export * from "./star-button";
 export * from "./OnboardingFlow";
+export * from "./NewComp";

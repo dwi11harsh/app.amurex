@@ -1,4 +1,5 @@
 import {
+  NewComp,
   ConnectDocsOrNotionPopup,
   Navbar,
   ShowOnboardingFlow,
@@ -18,6 +19,7 @@ const AISearch = (): JSX.Element => {
         <ShowOnboardingFlow />
         <div className="p-3 md:p-6 max-w-7xl mx-auto w-full">
           <ConnectDocsOrNotionPopup />
+          <NewComp />
         </div>
       </CheckSearchInitiated>
     </>
